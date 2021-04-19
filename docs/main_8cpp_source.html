@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>aardvark: /home/drseth/CPTR227/doxygen-cmake-github/src/main.cpp Source File</title>
+<title>Searching: /home/lee/Leecmake/ProjectXV/src/main.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">aardvark
+   <div id="projectname">Searching
    &#160;<span id="projectnumber">0.3.0</span>
    </div>
   </td>
@@ -71,20 +71,71 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include&lt;bits/stdc++.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="main_8cpp.html#aa99823a0fc8313c9c32541ce768fb801">   21</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#aa99823a0fc8313c9c32541ce768fb801">add</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span>(a + b);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">   26</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a>(<span class="keywordtype">int</span>, <span class="keywordtype">char</span>**) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Hello, world! Ver 2.1\n&quot;</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="main_8cpp.html#acaa0c375a125b71914bae3929cdf3a67">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#acaa0c375a125b71914bae3929cdf3a67">printVec</a>(vector&lt;int&gt; a){</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span>* pos = a.data();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; a.size(); i++){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      cout &lt;&lt; *pos++ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span>(0);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="main_8cpp.html#a40f6cf23a7c1faadfd42e2a2757dd1cb">   22</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a40f6cf23a7c1faadfd42e2a2757dd1cb">compare</a>(<span class="keywordtype">int</span> &amp;x, <span class="keywordtype">int</span> &amp;y) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (x &lt; y) <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (y &lt; x) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="main_8cpp.html#aa9d73bf393f54a206b12e6e6341a10f0">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#aa9d73bf393f54a206b12e6e6341a10f0">merge</a>(vector&lt;int&gt; &amp;a0, vector&lt;int&gt; &amp;a1, vector&lt;int&gt; &amp;a) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">int</span> i0 = 0, i1 = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; a.size(); i++) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (i0 == a0.size())</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      a[i] = a1[i1++];</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i1 == a1.size())</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      a[i] = a0[i0++];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="main_8cpp.html#a40f6cf23a7c1faadfd42e2a2757dd1cb">compare</a>(a0[i0], a1[i1]) &lt; 0)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      a[i] = a0[i0++];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      a[i] = a1[i1++];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="main_8cpp.html#aba2ee55ad13f88651856ac430e1fe195">   42</a></span>&#160;vector&lt;int&gt; <a class="code" href="main_8cpp.html#aba2ee55ad13f88651856ac430e1fe195">mergeSort</a>(vector&lt;int&gt; &amp;a) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">if</span> (a.size() &lt;= 1) <span class="keywordflow">return</span>(a);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  vector&lt;int&gt; a0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  vector&lt;int&gt; a1;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; a.size(); i++){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">if</span> (i &lt; a.size()/2){</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          a0.push_back(a[i]);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          a1.push_back(a[i]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="main_8cpp.html#aba2ee55ad13f88651856ac430e1fe195">mergeSort</a>(a0);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="main_8cpp.html#aba2ee55ad13f88651856ac430e1fe195">mergeSort</a>(a1);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="main_8cpp.html#aa9d73bf393f54a206b12e6e6341a10f0">merge</a>(a0, a1, a);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">return</span>(a);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">   60</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a>(<span class="keywordtype">int</span>, <span class="keywordtype">char</span>**) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    vector&lt;int&gt; vec = {13,8,5,2,4,0,6,9,7,3,12,1,10,11};<span class="comment">//only works with exponents of 2 currently.</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;before: &quot;</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="main_8cpp.html#acaa0c375a125b71914bae3929cdf3a67">printVec</a>(vec);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="main_8cpp.html#aba2ee55ad13f88651856ac430e1fe195">mergeSort</a>(vec);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;after: &quot;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="main_8cpp.html#acaa0c375a125b71914bae3929cdf3a67">printVec</a>(vec);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="amain_8cpp_html_a2c3f6775325c30275d11c6abee2db6a0"><div class="ttname"><a href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a></div><div class="ttdeci">int main(int, char **)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00026">main.cpp:26</a></div></div>
-<div class="ttc" id="amain_8cpp_html_aa99823a0fc8313c9c32541ce768fb801"><div class="ttname"><a href="main_8cpp.html#aa99823a0fc8313c9c32541ce768fb801">add</a></div><div class="ttdeci">int add(int a, int b)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00021">main.cpp:21</a></div></div>
+<div class="ttc" id="amain_8cpp_html_acaa0c375a125b71914bae3929cdf3a67"><div class="ttname"><a href="main_8cpp.html#acaa0c375a125b71914bae3929cdf3a67">printVec</a></div><div class="ttdeci">int printVec(vector&lt; int &gt; a)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00013">main.cpp:13</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aa9d73bf393f54a206b12e6e6341a10f0"><div class="ttname"><a href="main_8cpp.html#aa9d73bf393f54a206b12e6e6341a10f0">merge</a></div><div class="ttdeci">void merge(vector&lt; int &gt; &amp;a0, vector&lt; int &gt; &amp;a1, vector&lt; int &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00028">main.cpp:28</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a2c3f6775325c30275d11c6abee2db6a0"><div class="ttname"><a href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a></div><div class="ttdeci">int main(int, char **)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00060">main.cpp:60</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a40f6cf23a7c1faadfd42e2a2757dd1cb"><div class="ttname"><a href="main_8cpp.html#a40f6cf23a7c1faadfd42e2a2757dd1cb">compare</a></div><div class="ttdeci">int compare(int &amp;x, int &amp;y)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00022">main.cpp:22</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aba2ee55ad13f88651856ac430e1fe195"><div class="ttname"><a href="main_8cpp.html#aba2ee55ad13f88651856ac430e1fe195">mergeSort</a></div><div class="ttdeci">vector&lt; int &gt; mergeSort(vector&lt; int &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00042">main.cpp:42</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
